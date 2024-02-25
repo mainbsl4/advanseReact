@@ -1,21 +1,14 @@
-import { UserProvider, useUser } from "./components/CONTEX/UserContext";
-import FeedbackForm from "./components/FeedbackForm";
-import Forming from "./components/Forming";
-import Listing from "./components/Listing";
 import { useState, createContext, useContext } from "react";
+import ReactDOM from "react-dom/client";
 
-
-
-export const UserContext = createContext();
+const UserContext = createContext();
 
 function Component1() {
-  const [user, setUser] = useState("Jesse Hallll");
+  const [user, setUser] = useState("Jesse Hall");
 
   return (
     <UserContext.Provider value={user}>
       <h1>{`Hello ${user}!`}</h1>
-      <Forming/>
-
       <Component2 />
     </UserContext.Provider>
   );
@@ -40,10 +33,9 @@ function Component3() {
 }
 
 function Component4() {
-  const user = useContext(UserContext);
   return (
     <>
-      <h1>Component 4 {user}</h1>
+      <h1>Component 4</h1>
       <Component5 />
     </>
   );
@@ -60,14 +52,5 @@ function Component5() {
   );
 }
 
-function App() {
-  return (
-    <>
-      {/* <Listing /> */}
-      {/* <FeedbackForm/> */}
-      <Component1/>
-    </>
-  );
-}
-
-export default App;
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Component1 />);

@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import { useContext, useState } from "react";
+import { UserContext } from "../App";
 
 export default function Forming() {
+  const user = useContext(UserContext);
   const [name, setName] = useState("");
 
   const handelSubmit = (e) => {
@@ -16,7 +18,7 @@ export default function Forming() {
   return (
     <form onSubmit={handelSubmit}>
       <div>
-        <label htmlFor="name">Name: </label>
+        <label htmlFor="name">Name:</label>
         <input
           type="text"
           name="name"
@@ -25,6 +27,7 @@ export default function Forming() {
           onChange={handelChenge}
         />
       </div>
+      <p>hi {user + user + user}</p>
       <button type="submit" disabled={!name}>
         Submit
       </button>
