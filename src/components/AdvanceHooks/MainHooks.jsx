@@ -1,3 +1,5 @@
+// import { useState } from "react";
+
 import { useState } from "react";
 
 function GoalForm(props) {
@@ -43,8 +45,6 @@ function GoalForm(props) {
   );
 }
 
-
-
 function ListOfGoals (props){
   return(
     <>
@@ -61,8 +61,6 @@ function ListOfGoals (props){
   )
 }
 
-
-
 export default function MainHooks() {
   const [allGoals, updateAllGoals] = useState([]);
   function addGoal (goal) {
@@ -75,3 +73,87 @@ export default function MainHooks() {
     </>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function GoalForm(props) {
+//   const [formData, setFormData] = useState({
+//     goal: "",
+//     by: "",
+//   });
+
+//   const handelChenge = (e) => {
+//     setFormData({ ...formData, [e.target.name]: e.target.value });
+//   };
+
+//   const handelSubmit = (e) => {
+//     e.preventDefault();
+//     props.onAdd(formData);
+//     setFormData({ goal: "", by: "" });
+//   };
+
+//   console.log(formData);
+//   return (
+//     <>
+//       <h2>Set Goal</h2>
+//       <form onSubmit={handelSubmit}>
+//         <input
+//           type="text"
+//           name="goal"
+//           id=""
+//           onChange={handelChenge}
+//           placeholder="Goal"
+//         />
+
+//         <input
+//           type="text"
+//           name="by"
+//           id=""
+//           onChange={handelChenge}
+//           placeholder="By"
+//         />
+//         <button type="submit">Submit</button>
+//       </form>
+//     </>
+//   );
+// }
+
+// function ListOFGoals(props) {
+//   return (
+//     <>
+//       <ul>
+//         {props.allGoals.map((g) => (
+//           <li key={g.goal}>
+//             Goal: {g.goal} by {g.by}
+//           </li>
+//         ))}
+//       </ul>
+//     </>
+//   );
+// }
+
+// export default function MainHooks() {
+//   const [allGoals, updateAllGoals] = useState([]);
+//   function addGoals(goal) {
+//     updateAllGoals([...allGoals, goal]);
+//   }
+//   return (
+//     <div>
+//       <GoalForm onAdd={addGoals} />
+//       <ListOFGoals allGoals={allGoals} />
+//     </div>
+//   );
+// }
