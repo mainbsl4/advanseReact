@@ -22,7 +22,7 @@ function GoalForm(props) {
   return (
     <>
       <h1>My Little Lemon Goals</h1>
-      <form onSubmit={handleSubmit }>
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
           name="goal"
@@ -45,49 +45,34 @@ function GoalForm(props) {
   );
 }
 
-function ListOfGoals (props){
-  return(
-    <>
-    <ul>
-      {
-        props.allGoals.map((g)=>(
-          <li key={g.goal}>
-            <span>My goal is to {g.goal}, by {g.by}</span>
-          </li>
-        ))
-      }
-    </ul>
-    </>
-  )
-}
-
-export default function MainHooks() {
-  const [allGoals, updateAllGoals] = useState([]);
-  function addGoal (goal) {
-    updateAllGoals([...allGoals, goal]);
-  }
+function ListOfGoals(props) {
   return (
     <>
-      <GoalForm  onAdd= {addGoal}/>
-      <ListOfGoals allGoals={allGoals}/>
+      <ul>
+        {props.allGoals.map((g) => (
+          <li key={g.goal}>
+            <span>
+              My goal is to {g.goal}, by {g.by}
+            </span>
+          </li>
+        ))}
+      </ul>
     </>
   );
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+export default function MainHooks() {
+  const [allGoals, updateAllGoals] = useState([]);
+  function addGoal(goal) {
+    updateAllGoals([...allGoals, goal]);
+  }
+  return (
+    <>
+      <GoalForm onAdd={addGoal} />
+      <ListOfGoals allGoals={allGoals} />
+    </>
+  );
+}
 
 // function GoalForm(props) {
 //   const [formData, setFormData] = useState({

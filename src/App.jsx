@@ -3,6 +3,7 @@ import FeedbackForm from "./components/FeedbackForm";
 import Forming from "./components/Forming";
 import Listing from "./components/Listing";
 import "./App.css";
+import UseEffectHooks from "./components/useEffect/UseEffectHooks";
 
 // function Component1() {
 
@@ -16,7 +17,8 @@ function App() {
     <>
       {/* <Listing /> */}
       {/* <FeedbackForm/> */}
-      <RootContext />
+      {/* <RootContext /> */}
+      <UseEffectHooks/>
     </>
   );
 }
