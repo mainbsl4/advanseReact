@@ -4,6 +4,7 @@ import Forming from "./components/Forming";
 import Listing from "./components/Listing";
 import "./App.css";
 import UseEffectHooks from "./components/useEffect/UseEffectHooks";
+import WWTime from "./components/timeZone/WWTime";
 
 // function Component1() {
 
@@ -18,7 +19,8 @@ function App() {
       {/* <Listing /> */}
       {/* <FeedbackForm/> */}
       {/* <RootContext /> */}
-      <UseEffectHooks/>
+      {/* <UseEffectHooks/> */}
+      <WWTime/>
     </>
   );
 }
