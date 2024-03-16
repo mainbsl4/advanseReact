@@ -3,8 +3,9 @@ import FeedbackForm from "./components/FeedbackForm";
 import Forming from "./components/Forming";
 import Listing from "./components/Listing";
 import "./App.css";
-import UseEffectHooks from "./components/useEffect/UseEffectHooks";
+import UseEffectHooks from "./components/Hooks/UseEffectHooks";
 import WWTime from "./components/timeZone/WWTime";
+import UseReducerHooks from "./components/Hooks/UseReducerHooks";
 
 // function Component1() {
 
@@ -20,7 +21,8 @@ function App() {
       {/* <FeedbackForm/> */}
       {/* <RootContext /> */}
       {/* <UseEffectHooks/> */}
-      <WWTime/>
+      {/* <WWTime/> */}
+      <UseReducerHooks/>
     </>
   );
 }
