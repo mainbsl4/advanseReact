@@ -30,7 +30,10 @@ const headingStylesPlugin = plugin(function ({ addBase }) {
   });
 });
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     fontFamily: {
       Poppins: ["Poppins", "sans-serif"],

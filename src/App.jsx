@@ -6,6 +6,8 @@ import "./App.css";
 import UseEffectHooks from "./components/Hooks/UseEffectHooks";
 import WWTime from "./components/timeZone/WWTime";
 import UseReducerHooks from "./components/Hooks/UseReducerHooks";
+import NavBar from "./components/router/NavBar";
+import NewsApi from "./components/api/NewsApi";
 
 // function Component1() {
 
@@ -22,7 +24,9 @@ function App() {
       {/* <RootContext /> */}
       {/* <UseEffectHooks/> */}
       {/* <WWTime/> */}
-      <UseReducerHooks/>
+      {/* <UseReducerHooks/> */}
+      <NavBar />
+      <NewsApi />
     </>
   );
 }
