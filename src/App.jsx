@@ -26,7 +26,7 @@ function App() {
       {/* <WWTime/> */}
       {/* <UseReducerHooks/> */}
       <NavBar />
-      <NewsApi />
+      {/* <NewsApi /> */}
     </>
   );
 }
