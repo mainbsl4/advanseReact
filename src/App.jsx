@@ -8,6 +8,7 @@ import WWTime from "./components/timeZone/WWTime";
 import UseReducerHooks from "./components/Hooks/UseReducerHooks";
 import NavBar from "./components/router/NavBar";
 import NewsApi from "./components/api/NewsApi";
+import AppRouter from "./components/router/routerSetub/AppRouter";
 
 // function Component1() {
 
@@ -25,8 +26,8 @@ function App() {
       {/* <UseEffectHooks/> */}
       {/* <WWTime/> */}
       {/* <UseReducerHooks/> */}
-      <NavBar />
       {/* <NewsApi /> */}
+      <AppRouter/>
     </>
   );
 }
